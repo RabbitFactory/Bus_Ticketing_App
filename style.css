@@ -15,3 +15,8 @@
 .shahi_custom_shadow{
     box-shadow: 0px 3px 0 var(--primary-green);
 }
+
+.shahi_custom_bottom_shadow{
+    box-shadow: 0px -2px 0 var(--primary-green);
+
+}

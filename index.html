@@ -76,12 +76,13 @@
 
     </header>
 
-    <main class="w-[85%] mx-auto">
+    <main class="mx-auto w-full">
         <!-- Offers Sections -->
-        <section class="my-24 lg:my-48 flex flex-col items-center">
+        <section class="my-24 lg:my-48 flex flex-col items-center justify-center w-[85%] mx-auto">
             <h2 class="text-4xl font-bold">Best offers for you</h2>
             <!-- ticket-container -->
-            <div class="my-10 flex gap-14 flex-col lg:flex-row">
+            <div class="my-10 flex gap-10 flex-col lg:flex-row items-center justify-center mx-auto">
+                <!-- yellow ticket -->
                 <div class="ticket flex ">
                     <div class="bg-yellow-400 border-r-2 border-dashed border-white p-10 rounded-l-2xl flex flex-col gap-4 lg:block">
                         <h3 class="text-4xl font-bold">15% OFF</h3>
@@ -95,7 +96,8 @@
                         <p>Coupon Code</p>
                     </div>
                 </div>
-                <div class="ticket flex">
+                <!-- pink ticket -->
+                <div class="ticket flex mr-0">
                     <div class="p-10 bg-pink-400 border-r-2 border-dashed border-white rounded-l-2xl flex flex-col gap-4 lg:block">
                         
                         <h3  class="text-4xl font-bold">20% OFF</h3>
@@ -111,75 +113,85 @@
                 </div>
             </div>
 
-            <button class="btn bg-transparent border-[--primary-green] text-[--primary-green]">
-                See All Offers
-            </button>
+            <div>
+                <button class="btn bg-transparent border-[--primary-green] text-[--primary-green]">
+                    See All Offers
+                </button>
+            </div>
         </section>
 
         <!-- Counter Section -->
-         <section>
+         <section class="shahi_custom_bottom_shadow rounded-t-[5rem] w-full bg-gray-100">
             <!-- counter div -->
-            <div>
+            <div class="w-[85%] mx-auto">
                 <!-- counter heading text div -->
-                <div>
-                    <h2>P.H Paribahan</h2>
-                    <p>Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing features allow for a streamlined .</p>
+                <div class="text-center">
+                    <h2 class="font-bold text-4xl py-10">P.H Paribahan</h2>
+                    <p class="text-gray-600 mb-10">Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing features allow for a streamlined .</p>
                 </div>
                 <!-- counter start -->
                 <div>
                     <!-- counter static ticket demo div -->
-                    <div>
+                    <div class="bg-white flex flex-col lg:flex-row rounded-3xl">
                         <!-- demo left -->
-                        <div>
+                        <div class="p-6 flex-[9] lg:border-r-2 lg:border-dashed lg:border-[--primary-green] lg:pr-20">
                             <!-- Ticket Details -->
-                            <div>
-                                <div>
-                                    <img src="img/bus-logo.png" alt="">
-                                    <div>
-                                        <h2>Greenline Paribahan</h2>
+                            <div class="flex justify-between flex-col lg:flex-row gap-3">
+                                <div class="flex gap-4 items-center">
+                                    <div><img src="img/bus-logo.png" alt=""></div>
+                                    <div class="">
+                                        <h2 class="text-3xl font-bold">Greenline Paribahan</h2>
                                         <p>Coach-009-WEB ! AC_Business</p>
                                     </div>
                                 </div>
-                                <div>
-                                    <img src="img/seat-green.png" alt="">
-                                    <span>40</span>
-                                    Seats left
+                                <div class="flex gap-2 items-center bg-green-100 text-[--primary-green] font-semibold p-4 rounded-lg">
+                                    <div><img src="img/seat-green.png" alt=""></div>
+                                    <div>
+                                        <span>40</span>
+                                        Seats left
+                                    </div>
                                 </div>
                             </div>
-                            <div>
-                                <div>
+
+
+                            <!-- gray part -->
+                            <div class="bg-gray-100 rounded-xl p-3 lg:p-6 my-4 lg:text-2xl">
+                                <div class="flex border-b-2 border-dashed justify-between py-4">
                                     <p>Route</p>
-                                    <p>Dhaka - Sylhet</p>
+                                    <p class="font-bold">Dhaka - Sylhet</p>
                                 </div>
-                                <div>
+                                <div class="flex border-b-2 border-dashed justify-between py-4">
                                     <p>Departure Time</p>
-                                    <p>9:00 PM</p>
+                                    <p class="font-bold">9:00 PM</p>
                                 </div>
-                                <div>
-                                    <div>Boarding Point - Laxmipur</div>
-                                    <div>Dropping Point - Bogura</div>
-                                    <div>Est. Time - 11 Hour</div>
+                                <div class="flex flex-col lg:flex-row gap-6 justify-between py-4">
+                                    <div class="bg-gray-300 p-3 rounded-lg ">Boarding Point - Laxmipur</div>
+                                    <div class="bg-gray-300 p-3 rounded-lg ">Dropping Point - Bogura</div>
+                                    <div class="bg-gray-300 p-3 rounded-lg ">Est. Time - 11 Hours</div>
                                 </div>
                             </div>
                         </div>
                         <!-- demo right -->
-                        <div>
-                            <img src="img/fare.png" alt="">
-                            <h3>550 Taka</h3>
-                            <p>Per Seat</p>
+                        <div class="flex-[2] justify-center items-center flex flex-col gap-3 relative pb-6">
+                            <div class="hidden lg:block w-16 bg-gray-100 h-16 rounded-full absolute -top-8 -left-[33px]"></div>
+                            <div class="hidden lg:block w-16 bg-gray-100 h-16 rounded-full absolute -bottom-8 -left-[33px]"></div>
+                            <div><img src="img/fare.png" alt=""></div>
+                            <h3 class="font-bold text-4xl">550 Taka</h3>
+                            <p class="text-2xl">Per Seat</p>
                         </div>
                     </div>
                     <!-- dynamic layout div -->
-                    <div>
+                    <div class="flex bg-white mt-10 rounded-xl p-6">
                         <!-- seat plan -->
-                        <div>
-                            <h1>Select Your Seat</h1>
-                            <div>
-                                <div>
+                        <div class="flex-[3] lg:pr-10 lg:border-r-2 border-dashed lg:mr-10">
+
+                            <h1 class="text-3xl font-semibold border-b-2 border-dashed pb-4">Select Your Seat</h1>
+                            <div class="flex justify-between py-4 border-b-2 border-dashed mb-4">
+                                <div class="flex gap-2">
                                     <img src="img/seat-gray.png" alt="">
                                     <p>Available</p>
                                 </div>
-                                <div>
+                                <div class="flex gap-2">
                                     <img src="img/seat-green-filled.png" alt="">
                                     <p>Selected</p>
                                 </div>
@@ -190,156 +202,172 @@
 
                             <!-- seats table -->
 
-                            <div>
-                                <img src="img/fare.png" alt="">
-                            </div>
-                            <div>
-                                <div>A</div>
-                                <div>
-                                    <div>
-                                        <button>A1</button>
-                                        <button>A2</button>
-                                    </div>
-                                    <div>
-                                        <button>A3</button>
-                                        <button>A4</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div>B</div>
-                                <div>
-                                    <div>
-                                        <button>B1</button>
-                                        <button>B2</button>
-                                    </div>
-                                    <div>
-                                        <button>B3</button>
-                                        <button>B4</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div>C</div>
-                                <div>
-                                    <div>
-                                        <button>C1</button>
-                                        <button>C2</button>
-                                    </div>
-                                    <div>
-                                        <button>C3</button>
-                                        <button>C4</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div>D</div>
-                                <div>
-                                    <div>
-                                        <button>D1</button>
-                                        <button>D2</button>
-                                    </div>
-                                    <div>
-                                        <button>D3</button>
-                                        <button>D4</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div>E</div>
-                                <div>
-                                    <div>
-                                        <button>E1</button>
-                                        <button>E2</button>
-                                    </div>
-                                    <div>
-                                        <button>E3</button>
-                                        <button>E4</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div>F</div>
-                                <div>
-                                    <div>
-                                        <button>F1</button>
-                                        <button>F2</button>
-                                    </div>
-                                    <div>
-                                        <button>F3</button>
-                                        <button>F4</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div>G</div>
-                                <div>
-                                    <div>
-                                        <button>G1</button>
-                                        <button>G2</button>
-                                    </div>
-                                    <div>
-                                        <button>G3</button>
-                                        <button>G4</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div>H</div>
-                                <div>
-                                    <div>
-                                        <button>H1</button>
-                                        <button>H2</button>
-                                    </div>
-                                    <div>
-                                        <button>H3</button>
-                                        <button>H4</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div>I</div>
-                                <div>
-                                    <div>
-                                        <button>I1</button>
-                                        <button>I2</button>
-                                    </div>
-                                    <div>
-                                        <button>I3</button>
-                                        <button>I4</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div>J</div>
-                                <div>
-                                    <div>
-                                        <button>J1</button>
-                                        <button>J2</button>
-                                    </div>
-                                    <div>
-                                        <button>J3</button>
-                                        <button>J4</button>
-                                    </div>
+                            <div class="flex justify-end lg:pr-[88px] pb-10">
+                                <div class="bg-gray-200 w-28 px-4 py-4 rounded-lg flex justify-center items-center">
+                                    <img class="w-8" src="img/steering-wheel.png" alt="">
                                 </div>
                             </div>
 
 
+
+                            <div class="flex flex-col items-center space-y-6">
+                                <!-- Section A -->
+                                <div class="flex gap-6 items-center text-2xl">
+                                    <div class="w-20 text-center">A</div>
+                                    <div class="flex gap-20">
+                                        <div class="flex gap-10">
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">A1</button>
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">A2</button>
+                                        </div>
+                                        <div class="flex gap-10">
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">A3</button>
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">A4</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- Section B -->
+                                <div class="flex gap-6 items-center text-2xl">
+                                    <div class="w-20 text-center">B</div>
+                                    <div class="flex gap-20">
+                                        <div class="flex gap-10">
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">B1</button>
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">B2</button>
+                                        </div>
+                                        <div class="flex gap-10">
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">B3</button>
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">B4</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- Section C -->
+                                <div class="flex gap-6 items-center text-2xl">
+                                    <div class="w-20 text-center">C</div>
+                                    <div class="flex gap-20">
+                                        <div class="flex gap-10">
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">C1</button>
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">C2</button>
+                                        </div>
+                                        <div class="flex gap-10">
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">C3</button>
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">C4</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- Section D -->
+                                <div class="flex gap-6 items-center text-2xl">
+                                    <div class="w-20 text-center">D</div>
+                                    <div class="flex gap-20">
+                                        <div class="flex gap-10">
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">D1</button>
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">D2</button>
+                                        </div>
+                                        <div class="flex gap-10">
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">D3</button>
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">D4</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- Section E -->
+                                <div class="flex gap-6 items-center text-2xl">
+                                    <div class="w-20 text-center">E</div>
+                                    <div class="flex gap-20">
+                                        <div class="flex gap-10">
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">E1</button>
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">E2</button>
+                                        </div>
+                                        <div class="flex gap-10">
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">E3</button>
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">E4</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- Section F -->
+                                <div class="flex gap-6 items-center text-2xl">
+                                    <div class="w-20 text-center">F</div>
+                                    <div class="flex gap-20">
+                                        <div class="flex gap-10">
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">F1</button>
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">F2</button>
+                                        </div>
+                                        <div class="flex gap-10">
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">F3</button>
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">F4</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- Section G -->
+                                <div class="flex gap-6 items-center text-2xl">
+                                    <div class="w-20 text-center">G</div>
+                                    <div class="flex gap-20">
+                                        <div class="flex gap-10">
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">G1</button>
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">G2</button>
+                                        </div>
+                                        <div class="flex gap-10">
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">G3</button>
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">G4</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- Section H -->
+                                <div class="flex gap-6 items-center text-2xl">
+                                    <div class="w-20 text-center">H</div>
+                                    <div class="flex gap-20">
+                                        <div class="flex gap-10">
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">H1</button>
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">H2</button>
+                                        </div>
+                                        <div class="flex gap-10">
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">H3</button>
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">H4</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- Section I -->
+                                <div class="flex gap-6 items-center text-2xl">
+                                    <div class="w-20 text-center">I</div>
+                                    <div class="flex gap-20">
+                                        <div class="flex gap-10">
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">I1</button>
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">I2</button>
+                                        </div>
+                                        <div class="flex gap-10">
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">I3</button>
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">I4</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- Section J -->
+                                <div class="flex gap-6 items-center text-2xl">
+                                    <div class="w-20 text-center">J</div>
+                                    <div class="flex gap-20">
+                                        <div class="flex gap-10">
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">J1</button>
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">J2</button>
+                                        </div>
+                                        <div class="flex gap-10">
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">J3</button>
+                                            <button class="bg-gray-200 w-28 px-4 py-4 rounded-lg">J4</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
 
 
 
                         </div>
                         <!-- dynamic checkout -->
-                        <div>
+                        <div class="flex-[2]">
                             <h2>
                                 Select Your Seat
                             </h2>
