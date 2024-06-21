@@ -11,12 +11,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header>
+    <header class="w-[85%] mx-auto">
         <!-- Nav Section -->
-        <nav>
-            <div>P-Ticket</div>
+        <nav class="flex justify-between mt-16 mb-8">
+            <div class="text-3xl font-bold">P-Ticket</div>
             <div>
-                <ul>
+                <ul class="flex gap-10 text-gray-500">
                     <li>Home</li>
                     <li>About</li>
                     <li>Destination</li>
@@ -24,7 +24,7 @@
                 </ul>
             </div>
             <div>
-                <button>
+                <button class="flex gap-4 text-green-500 font-bold border border-green-300 px-6 py-2 rounded-lg bg-green-50">
                     Bus
                     <img src="img/bus-icon.png" alt="">
                 </button>
@@ -32,7 +32,7 @@
         </nav>
 
         <!-- Banner Section -->
-        <section>
+        <section class="bg-[url('img/banner.png')] bg-no-repeat bg-cover h-[47rem]">
              <h1>End-To-End Travel with</h1>
              <h2>P Paribahan</h2>
              <p>Yes, you can run unit tests and view the results directly within the app.
