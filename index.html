@@ -32,36 +32,46 @@
         </nav>
 
         <!-- Banner Section -->
-        <section class="bg-[url('img/banner.png')] bg-no-repeat bg-cover h-[47rem]">
-             <h1>End-To-End Travel with</h1>
-             <h2>P Paribahan</h2>
-             <p>Yes, you can run unit tests and view the results directly within the app.
-                <br>The integrated testing features allow for a streamlined .
-             </p>
-             <button>Buy Tickets</button>
-             <div>
+        <section class="relative bg-[url('img/banner.png')] bg-no-repeat bg-cover h-[47rem]">
+            <div class="flex flex-col justify-center items-center gap-8">
+                <h1 class="text-8xl font-bold text-white">End-To-End Travel with</h1>
+                <h2 class="text-6xl font-bold text-[--primary-green]">P Paribahan</h2>
+                <p class="text-white text-center">Yes, you can run unit tests and view the results directly within the app.
+                   <br>The integrated testing features allow for a streamlined .
+                </p>
                 <div>
-                    <img src="img/people.png" alt="">
-                <div>
-                    <h3>500k+</h3>
-                    <p>Registered Users</p>
+                    <button class="btn bg-[--primary-green] border-none">Buy Tickets</button>
                 </div>
-                </div>
-                <div>
-                    <img src="img/ticket-cupon.png" alt="">
-                <div>
-                    <h3>1.7 lacks</h3>
-                    <p>Tickets Sold</p>
-                </div>
-                </div>
-                <div>
-                    <img src="img/stoppage.png" alt="">
-                <div>
-                    <h3>80k+</h3>
-                    <p>Rental Partners</p>
-                </div>
-                </div>
-             </div>
+            </div>
+            <!-- 3 div section -->
+            <div class="absolute -bottom-16 left-1/2 transform -translate-x-1/2">
+                <div class="flex justify-center gap-6  items-center">
+                    <!-- first child -->
+                    <div class="bg-white rounded-xl flex p-6 gap-3">
+                        <div><img src="img/people.png" alt=""></div>
+                    <div>
+                        <h3 class="text-3xl font-bold" >500K+</h3>
+                        <p>Registered Users</p>
+                    </div>
+                    </div>
+                    <!-- second child -->
+                    <div class="bg-white rounded-xl flex p-6 gap-3">
+                        <img src="img/ticket-cupon.png" alt="">
+                    <div>
+                        <h3 class="text-3xl font-bold">1.7 lacks</h3>
+                        <p>Tickets Sold</p>
+                    </div>
+                    </div>
+                    <!-- third child -->
+                    <div class="bg-white rounded-xl flex p-6 gap-3">
+                        <img src="img/stoppage.png" alt="">
+                    <div>
+                        <h3 class="text-3xl font-bold">80k+</h3>
+                        <p>Rental Partners</p>
+                    </div>
+                    </div>
+                 </div>
+            </div>
         </section>
 
     </header>
