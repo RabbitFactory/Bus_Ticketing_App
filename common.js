@@ -10,11 +10,32 @@ const selectedSeatsNumber = parseInt(
   document.getElementById("selectedSeatsNumber").innerText
 );
 
-const totalPrice = parseInt(document.getElementById("totalPrice").innerText);
+const totalPrice = document.getElementById("totalPrice");
 
-const grandTotalPrice = parseInt(
-  document.getElementById("grandTotalPrice").innerText
-);
+const grandTotalPrice = document.getElementById("grandTotalPrice");
+
+const couponInput = document.getElementById('couponInput');
+
+let couponInputValue = couponInput.value;
+
+const couponApplyButton = document.getElementById('couponButton');
+
+const phoneInput = document.getElementById('phoneInput');
+
+const finalBtn = document.getElementById('finalBtn');
+
+
+const input_box_id = document.getElementById('input_box_id');
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -32,15 +53,129 @@ function toggleSeat(event) {
     seat.classList.remove("selected"); // Deselect if already selected
     seat.classList.add("default");
     selectedCount--;
+
+    const seatInfoDivId = "seatInfo_" + seat.id;
+    const seatInfoDiv = document.getElementById(seatInfoDivId);
+    if(seatInfoDiv){
+      seatInfoDiv.remove();
+    }
+
+
+
+
+
+
+
   } else {
     if (selectedCount < maxSelection) {
       seat.classList.add("selected"); // Select if under max limit
       selectedCount++;
+
+      const seatInfoDiv = document.createElement("div");
+      seatInfoDiv.id = "seatInfo_" + seat.id;
+      seatInfoDiv.innerHTML = `
+      <div class="flex justify-between border-b-2 border-dashed pb-4">
+        <p>${seat.id}</p>
+        <p>Economy</p>
+        <p>550</p>
+      </div>`;
+
+      const seatInfoContainer = document.getElementById('seatInfoContainer');
+      seatInfoContainer.appendChild(seatInfoDiv);
+
+
+
+
+
+
+
+
     } else {
       alert("You can only select up to " + maxSelection + " seats.");
     }
+
+    
   }
-  seat.offsetWidth;
+
+  
+  
+  document.getElementById("selectedSeatsNumber").innerText = selectedCount;
+  totalPrice.innerText = 550 * selectedCount;
+
+  if(selectedCount === 4){
+    
+    couponInput.removeAttribute('disabled')
+    couponApplyButton.removeAttribute('disabled')
+
+
+    couponApplyButton.addEventListener('click', function() {
+      // Check if the coupon code is 'NEW15'
+      if (couponInput.value === 'NEW15') {
+        // Update the grand total price
+        grandTotalPrice.innerText =(550 * 4) -((550 * 4) * 0.15);
+
+
+        const discount = document.createElement("div");
+        discount.innerHTML = `
+          <div class= "flex justify-between">
+            <p>Total Discount</p>
+            <p>330</p>
+          </div>
+        `
+        seatInfoContainer.appendChild(discount);
+
+        input_box_id.classList.add('hidden');
+
+      }   else if(couponInput.value === 'Couple 20'){
+
+
+        grandTotalPrice.innerText =(550 * 4) -((550 * 4) * 0.2);
+
+
+        const discount = document.createElement("div");
+        discount.innerHTML = `
+          <div class= "flex justify-between">
+            <p>Total Discount</p>
+            <p>440</p>
+          </div>
+        `
+        seatInfoContainer.appendChild(discount);
+
+        input_box_id.classList.add('hidden');
+
+
+      }
+      
+      
+      
+      else {
+        // Handle the case where the coupon code is incorrect
+        alert('Invalid coupon code');
+      }
+    });
+
+
+
+  }
+
+//  && phoneInput.value.trim() !== ""
+function validatePhoneInput() {
+  let phoneInputValue = phoneInput.value.trim(); // Trimmed value of phone input
+  
+  if (selectedCount === 4 && phoneInputValue !== '') {
+    finalBtn.removeAttribute('disabled'); // Enable finalBtn
+  } 
+}
+
+// Event listener to monitor input changes
+phoneInput.addEventListener('input', validatePhoneInput);
+
+// Initial validation when the page loads (if needed)
+validatePhoneInput();
+
+
+
+
 }
 
 // Use the for...of loop to iterate through the seats
@@ -49,8 +184,9 @@ for (let seat of seats) {
 }
 
 
+function modal(){
 
-
+}
 
 
 

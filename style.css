@@ -41,7 +41,10 @@ html {
 
 }
 
-
+.special_class{
+    display: flex;
+    justify-content: space-between;
+}
 
 
 
