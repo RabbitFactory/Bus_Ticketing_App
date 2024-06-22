@@ -28,29 +28,15 @@ const finalBtn = document.getElementById('finalBtn');
 const input_box_id = document.getElementById('input_box_id');
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const seats = document.getElementsByClassName("seat");
 let selectedCount = 0;
 const maxSelection = 4;
 
 function toggleSeat(event) {
-  const seat = event.target; // Get the seat that was clicked
+  const seat = event.target; 
 
   if (seat.classList.contains("selected")) {
-    seat.classList.remove("selected"); // Deselect if already selected
+    seat.classList.remove("selected"); 
     seat.classList.add("default");
     selectedCount--;
 
@@ -60,15 +46,9 @@ function toggleSeat(event) {
       seatInfoDiv.remove();
     }
 
-
-
-
-
-
-
   } else {
     if (selectedCount < maxSelection) {
-      seat.classList.add("selected"); // Select if under max limit
+      seat.classList.add("selected"); 
       selectedCount++;
 
       const seatInfoDiv = document.createElement("div");
@@ -84,21 +64,12 @@ function toggleSeat(event) {
       seatInfoContainer.appendChild(seatInfoDiv);
 
 
-
-
-
-
-
-
     } else {
       alert("You can only select up to " + maxSelection + " seats.");
     }
-
-    
+ 
   }
 
-  
-  
   document.getElementById("selectedSeatsNumber").innerText = selectedCount;
   totalPrice.innerText = 550 * selectedCount;
 
@@ -109,11 +80,10 @@ function toggleSeat(event) {
 
 
     couponApplyButton.addEventListener('click', function() {
-      // Check if the coupon code is 'NEW15'
+     
       if (couponInput.value === 'NEW15') {
-        // Update the grand total price
+       
         grandTotalPrice.innerText =(550 * 4) -((550 * 4) * 0.15);
-
 
         const discount = document.createElement("div");
         discount.innerHTML = `
@@ -143,13 +113,11 @@ function toggleSeat(event) {
 
         input_box_id.classList.add('hidden');
 
-
       }
-      
-      
+          
       
       else {
-        // Handle the case where the coupon code is incorrect
+        
         alert('Invalid coupon code');
       }
     });
@@ -158,35 +126,27 @@ function toggleSeat(event) {
 
   }
 
-//  && phoneInput.value.trim() !== ""
+
 function validatePhoneInput() {
-  let phoneInputValue = phoneInput.value.trim(); // Trimmed value of phone input
+  let phoneInputValue = phoneInput.value.trim(); 
   
   if (selectedCount === 4 && phoneInputValue !== '') {
-    finalBtn.removeAttribute('disabled'); // Enable finalBtn
+    finalBtn.removeAttribute('disabled');
   } 
 }
 
-// Event listener to monitor input changes
 phoneInput.addEventListener('input', validatePhoneInput);
 
-// Initial validation when the page loads (if needed)
+
 validatePhoneInput();
 
-
-
-
 }
 
-// Use the for...of loop to iterate through the seats
+
 for (let seat of seats) {
-  seat.addEventListener("click", toggleSeat); // Attach the toggleSeat function as the event handler
+  seat.addEventListener("click", toggleSeat); 
 }
 
-
-function modal(){
-
-}
 
 
 
